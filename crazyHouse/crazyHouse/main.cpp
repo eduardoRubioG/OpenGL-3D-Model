@@ -7,9 +7,18 @@
 //
 
 #include <iostream>
+#include "include.h"
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+
+int main(int argc,  char** argv ) {
+    myglutInit(argc, argv);
+    myInit();
+    glutMouseFunc(mouse);
+    glutSpecialFunc(specialKeyboard);
+    glutKeyboardFunc(keyboard);
+    glutDisplayFunc(display);
+    glutMainLoop();
+    
     return 0;
+
 }
