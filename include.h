@@ -10,16 +10,16 @@
 #define include_hpp
 
 //Linux Headers
-//#ifdef LINUX
-//#include <GL/glut.h>
-//#endif
+#ifdef LINUX
+#include <GL/glut.h>
+#endif
 
 //Mac Headers
-//#ifdef OSX
+#ifdef OSX
 #include <OpenGL/gl.h>
 #include <OpenGL/glu.h>
 #include <GLUT/glut.h>
-//#endif
+#endif
 
 #include <stdio.h>
 #include "globals.h"
