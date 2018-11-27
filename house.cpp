@@ -28,6 +28,9 @@ void hardReset( ){
     Z_DELTA_SPIN = 0;  Z_SPIN = 0;
 }
 
+/**
+ * Render the house with smooth surfaces
+ */
 void drawHouse( ){
 
     /* Begin rotational parameters */ 
@@ -36,6 +39,9 @@ void drawHouse( ){
     glRotatef(X_SPIN, 1.0, 0.0, 0.0);
     glRotatef(Y_SPIN, 0.0, 1.0, 0.0);
     glRotatef(Z_SPIN, 0.0, 0.0, 1.0);
+    
+    /* Hello World Sign */
+    if( HOUSE_SIGN ) houseSign();
     
     /* House floor */
     glBegin( GL_QUADS );
@@ -109,10 +115,15 @@ void drawHouse( ){
     
 }
 
+/**
+* Render the house as a wireframe 
+*/
 void drawHouseLines( ){
     
-    glColor3f(1.0, 0.0, 1.0);
+    /* Hello world sign */ 
+    if( HOUSE_SIGN) houseSign();
     
+    glColor3f(1.0, 0.0, 1.0);
     /* Side A */
     glBegin( GL_LINE_STRIP );
     glVertex3f(-5,-5,0);

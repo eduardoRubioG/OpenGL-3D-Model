@@ -43,6 +43,29 @@ void orthoView( ) {
  */
 void customView( ) {
     
+    
+    /* Retrieve parameters from user through console */
+    float fov, ratio, near, far;
+    std::cout << "Enter the desired field of vision: ";
+    std::cin >> fov; std::cout << std::endl;
+    std::cout << "Enter the desired aspect ratio: ";
+    std::cin >> ratio; std::cout << std::endl;
+    std::cout << "Enter the desired near value: ";
+    std::cin >> near; std::cout << std::endl;
+    std::cout << "Enter the desired far value: ";
+    std::cin >> far; std::cout << std::endl;
+    
+    glMatrixMode(GL_PROJECTION);
+    glLoadIdentity();
+    gluPerspective( fov,        /* FOV */
+                   ratio,      /* Aspect ratio */
+                   near, far); /* near, far */
+    
+    gluLookAt(45.0+CAMERA_MOD, 45.0+CAMERA_MOD, 20.0+(CAMERA_MOD*.5),  /* eye */
+              0.0, 0.0, 0.0,      /* center */
+              0.0, 0.0, 1.0);     /* up definition */
+    glMatrixMode(GL_MODELVIEW);
+    glLoadIdentity();
 }
 
 /**
@@ -53,7 +76,7 @@ void viewHandler( int selection ) {
     switch( selection ){
         case 1: orthoView(); break; //Ortho
         case 2: projectionView(); break; //Projection
-        case 3: break; // Custom
+        case 3: customView(); break; // Custom
         default: break; 
     }
 }

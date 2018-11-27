@@ -9,7 +9,7 @@
 #include <stdio.h>
 
 /**
- *  Produce text
+ *  Produce 2D text
  */
 void drawString(float x, float y, void *font, const char* string ){
     glColor3f(1.0, 1.0, 1.0);
@@ -17,6 +17,41 @@ void drawString(float x, float y, void *font, const char* string ){
     glRasterPos2i( x, y );
     for(c=string; *c!='\0'; c++)
         glutBitmapCharacter(font, *c);
+}
+
+/**
+ * Produce 3D text
+ */
+void drawString(float x, float y, float z, void *font,  char* string)
+{
+    char *p;
+    
+    glLineWidth(2.0);
+    
+    /* Position the 3D text */
+    glPushMatrix();
+    glTranslatef(2.53, -3.5, 12.5);
+    glRotatef(90.0, 0.0, 0.0, 1.0);
+    glRotatef(45.0, 1.0, 0.0, 0.0);
+    glScalef(.01, .01, .01);
+
+    /* End positioning */
+    for (p = string; *p!='\0'; p++)
+        glutStrokeCharacter(GLUT_STROKE_ROMAN, *p);
+        
+    glPopMatrix();
+}
+
+/**
+ * Draws the Hello World sign on the roof of the house
+ */
+void houseSign( ){
+    if( !IS_WIREFRAME )
+        glColor3f(0.0,0.0,0.0);
+    else
+        glColor3f(1.0, 1.0, 1.0);
+    
+    drawString(1, 1, 1, GLUT_BITMAP_HELVETICA_18, "Hello World!");
 }
 
 /**
@@ -34,7 +69,7 @@ void viewModeText( ) {
     strcpy(charString, view.c_str());
     
     /* Set up OpenGL for 2d text in a 3d space */
-    glDisable(GL_TEXTURE_2D); //added this
+    glDisable(GL_TEXTURE_2D);
     glMatrixMode(GL_PROJECTION);
     glPushMatrix();
     glLoadIdentity();

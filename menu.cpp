@@ -25,7 +25,8 @@ void menuEventHandler( int selection ){
     if(  AXES_DRAWN && selection == 7 ) AXES_DRAWN = false;
     
    /* Toggle Hello World Sign */
-    
+    if( !HOUSE_SIGN && selection == 8 ) HOUSE_SIGN = true;
+    if( HOUSE_SIGN && selection == 9 ) HOUSE_SIGN = false;
     /* Reset House */ 
     if( selection == 10 ) hardReset();
     

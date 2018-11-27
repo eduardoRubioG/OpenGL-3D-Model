@@ -34,6 +34,7 @@ int CAMERA_MOD = 0; //Will be used to zoom in and out of the scene
 /* For menu use */
 bool IS_WIREFRAME = false;
 bool AXES_DRAWN = true;
+bool HOUSE_SIGN = false; 
 int VIEW_MODE = 2; // 1 = ortho, 2 = projection, 3 = custom -- Projection by default 
 
 
