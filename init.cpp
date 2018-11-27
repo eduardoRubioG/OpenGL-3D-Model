@@ -20,6 +20,7 @@ void myInit(void){
     glClearColor(0.1, 0.1, 0.1, 1.0);
     glColor3f(1.0, 0.0, 0.0);
     
+    glViewport(0, 0, WINDOW_MAX_X, WINDOW_MAX_Y);
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
     gluOrtho2D(WORLD_COORDINATES_MIN_X, WORLD_COORDINATES_MAX_X,
@@ -34,23 +35,19 @@ void display( ){
     glClear(GL_COLOR_BUFFER_BIT);
     glColor3f(1.0, 1.0, 1.0);
     
-    /* Define the camera */
-    glMatrixMode(GL_MODELVIEW);
-    glLoadIdentity();
-    gluPerspective( 45.0,        /* FOV */
-                   1.0,         /* Aspect ratio */
-                   1.0, 200.0); /* near, far */
-    
-    gluLookAt(135.0, 135.0, 20.0,  /* eye */
-              0.0, 0.0, 0.0,      /* center */
-              0.0, 0.0, 1.0);     /* up definition */
-    glMatrixMode(GL_PROJECTION);
-    glLoadIdentity();
+    /* Define the camera and view */
+    viewHandler( VIEW_MODE ); 
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     
-    /* Draw the house + axis */
-    drawAxes(100);
-    drawHouse();
+    /* Display View Mode Text */
+    viewModeText();
+    
+    /* Draw the axes (includes labels) */
+    if( AXES_DRAWN ) drawAxes(100);
+    
+    /* Draw the house */
+    if( !IS_WIREFRAME)   drawHouse( );
+    else                drawHouseLines();
     
     glutSwapBuffers();
 

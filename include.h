@@ -23,11 +23,17 @@
 
 #include <stdio.h>
 #include "globals.h"
-#include "axes.cpp"
 #include "house.cpp"
 #include "animation.cpp"
-#include "init.cpp"
+#include "views.cpp"
 #include "input.cpp"
+#include "menu.cpp"
+#include "text.cpp"
+#include "axes.cpp"
+#include "init.cpp"
+
+
+
 
 
 #endif /* include_hpp */
