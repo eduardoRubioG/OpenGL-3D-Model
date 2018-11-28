@@ -120,79 +120,39 @@ void drawHouse( ){
 */
 void drawHouseLines( ){
     
+    glPushMatrix();
+    glLoadIdentity();
+    glRotatef(X_SPIN, 1.0, 0.0, 0.0);
+    glRotatef(Y_SPIN, 0.0, 1.0, 0.0);
+    glRotatef(Z_SPIN, 0.0, 0.0, 1.0);
+    
     /* Hello world sign */ 
     if( HOUSE_SIGN) houseSign();
     
     glColor3f(1.0, 0.0, 1.0);
-    /* Side A */
-    glBegin( GL_LINE_STRIP );
-    glVertex3f(-5,-5,0);
-    glVertex3f(5,-5,0);
-    glVertex3f(5,-5,10);
-    glVertex3f(-5,-5,10);
-    glEnd();
     
-    /* Side B */
-    glBegin(GL_LINE_STRIP);
-    glVertex3f(5,-5,0);
-    glVertex3f(5,5,0);
-    glVertex3f(5,5,10);
-    glVertex3f(5,-5,10);
-    glEnd();
+    /* Align the wireframe to the origin */
+    glPushMatrix();
+    glTranslatef(0.0, 0.0, 5.0);
+    glRotatef(90.0, 0.0, 0.0, 1.0);
+    glutWireCube(10.0);
+    glBegin(GL_LINES);
+    glVertex3d(5,-5,5);
+    glVertex3d(5,0,10);
     
-    /* Side C */
-    glBegin(GL_LINE_STRIP);
-    glVertex3f(5,5,0);
-    glVertex3f(-5,5,0);
-    glVertex3f(-5,5,10);
-    glVertex3f(5,5,10);
-    glEnd();
+    glVertex3d(5,0,10);
+    glVertex3d(5,5,5);
     
-    /* Side D */
-    glBegin(GL_LINE_STRIP);
-    glVertex3f(-5,5,0);
-    glVertex3f(-5,-5,0);
-    glVertex3f(-5,-5,10);
-    glVertex3f(-5,5,10);
-    glEnd();
+    glVertex3d(5,0,10);
+    glVertex3d(-5,0,10);
     
-    /* House floor */
-    glBegin(GL_LINE_STRIP);
-    glVertex3f(0,0,0);
-    glVertex3f(10,0,0);
-    glVertex3f(10,10,0);
-    glVertex3f(0,10,0);
-    glEnd();
+    glVertex3d(-5,-5,5);
+    glVertex3d(-5,0,10);
     
-    /* Roof A */
-    glBegin(GL_LINE_STRIP);
-    glVertex3f(-5,5,10);
-    glVertex3f(-5,-5,10);
-    glVertex3f(0,-5,15);
-    glVertex3f(0,5,15);
+    glVertex3d(-5,0,10);
+    glVertex3d(-5,5,5);
     glEnd();
-    
-    /* Roof B */
-    glBegin(GL_LINE_STRIP);
-    glVertex3f(5,-5,10);
-    glVertex3f(5,5,10);
-    glVertex3f(0,5,15);
-    glVertex3f(0,-5,15);
-    glEnd();
-    
-    /* Side triangle A */
-    glBegin(GL_LINE_STRIP);
-    glVertex3f(-5,-5,10);
-    glVertex3f(5,-5,10);
-    glVertex3f(0,-5,15);
-    glEnd();
-    
-    glColor3f(1.0, 1.0, 1.0);
-    /* Side triangle B */
-    glBegin(GL_LINE_STRIP);
-    glVertex3f(-5,5,10);
-    glVertex3f(5,5,10);
-    glVertex3f(0,5,15);
-    glEnd();
+    glPopMatrix();
+    glPopMatrix();
     
 }
