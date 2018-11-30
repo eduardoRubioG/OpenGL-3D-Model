@@ -73,8 +73,8 @@ void createMenu( ){
     glutAddSubMenu("Axes Toggle", axes_menu);
     glutAddSubMenu("Hello World Toggle", sign_toggle_menu);
     
-    glutAttachMenu(GLUT_RIGHT_BUTTON);
-    //glutAttachMenu(GLUT_MIDDLE_BUTTON);
+    //glutAttachMenu(GLUT_RIGHT_BUTTON);
+    glutAttachMenu(GLUT_MIDDLE_BUTTON);
 }
 
 

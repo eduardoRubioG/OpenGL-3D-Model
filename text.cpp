@@ -16,7 +16,7 @@ void drawString(float x, float y, void *font, const char* string ){
     glColor3f(1.0, 1.0, 1.0);
     const char* c;
     glRasterPos2i( x, y );
-    for(c=string; *c!='\0'; c++)
+    for(c=(char*)string; *c!='\0'; c++)
         glutBitmapCharacter(font, *c);
 }
 
@@ -37,7 +37,7 @@ void drawString(float x, float y, float z, void *font,  char* string)
     glScalef(.01, .01, .01);
 
     /* End positioning */
-    for (p = string; *p!='\0'; p++)
+    for (p = (char*)string; *p!='\0'; p++)
         glutStrokeCharacter(GLUT_STROKE_ROMAN, *p);
         
     glPopMatrix();
@@ -98,7 +98,7 @@ void axesLabels( ){
     
     /* Define char arrays as the axes labels */
     std::string label_string;
-    char label[ 6 ];
+    char label[ 7 ];
     
     /* Set up OpenGL for 2d text in a 3d space */
     glDisable(GL_TEXTURE_2D); //added this
