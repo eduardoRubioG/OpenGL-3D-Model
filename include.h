@@ -23,14 +23,15 @@
 
 #include <stdio.h>
 #include "globals.h"
-#include "animation.cpp"
-#include "views.cpp"
-#include "text.cpp"
-#include "house.cpp"
-#include "input.cpp"
-#include "menu.cpp"
-#include "axes.cpp"
-#include "init.cpp"
+
+//#include "animation.cpp"
+//#include "views.cpp"
+//#include "text.cpp"
+//#include "house.cpp"
+//#include "input.cpp"
+//#include "menu.cpp"
+//#include "axes.cpp"
+//#include "init.cpp"
 
 
 

@@ -8,7 +8,7 @@
 
 #include <iostream>
 #include "include.h"
-
+#include "prototypes.h"
 
 int main(int argc,  char** argv ) {
     myglutInit(argc, argv);
@@ -16,6 +16,7 @@ int main(int argc,  char** argv ) {
     glutMouseFunc(mouse);
     glutSpecialFunc(specialKeyboard);
     glutKeyboardFunc(keyboard);
+    glutIdleFunc(animate);
     createMenu(); 
     glutDisplayFunc(display);
     glutMainLoop();
