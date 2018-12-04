@@ -38,8 +38,9 @@ void orthoView( ) {
     glMatrixMode (GL_PROJECTION);
     glLoadIdentity();
     glOrtho(-45.0, 45.0, -45.0, //left, right, bottom
-            45.0, 1.0, 200.0);//top, near, far
-    gluLookAt(45.0,45.0,20.0,  /* eye */
+            45.0, 1.0, 200.0);//top, near, far 
+
+    gluLookAt(45.0+CAMERA_MOD*5, 45.0+CAMERA_MOD*5, 20.0+(CAMERA_MOD*2.5),  /* eye */
               0.0, 0.0, 0.0,      /* center */
               0.0, 0.0, 1.0);     /* up definition */
     glMatrixMode(GL_MODELVIEW);
