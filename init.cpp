@@ -75,6 +75,7 @@ void initGlobals(){
 }
 
 void myglutInit( int argc, char** argv ){
+    initGlobals(); 
     glutInit( &argc, argv );
     glutInitDisplayMode( GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH );
     glutInitWindowSize(WINDOW_MAX_X, WINDOW_MAX_Y);
@@ -85,7 +86,6 @@ void myglutInit( int argc, char** argv ){
 void myInit(void){
     glClearColor(0.1, 0.1, 0.1, 1.0);
     glColor3f(1.0, 0.0, 0.0);
-    initGlobals();
     
     glViewport(0, 0, WINDOW_MAX_X, WINDOW_MAX_Y);
     glMatrixMode(GL_PROJECTION);
