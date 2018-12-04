@@ -1,7 +1,7 @@
 COMP = g++
 LIBDIRS = -L/usr/lib64
 INCDIRS = -I/usr/include
-LDLIBS =  -lglut -lGL -lGLU -lX11 -lm
+LDLIBS =  -lGL -lGLU -lglut -lX11 -lm
 OBJS = animation.o views.o house.o input.o menu.o axes.o init.o text.o 
 HEADERS = globals.h include.h
 

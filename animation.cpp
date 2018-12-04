@@ -11,12 +11,7 @@
 
 #include <stdio.h>
 #include "include.h"
-
-extern float X_SPIN, X_DELTA_SPIN;
-extern float Y_SPIN, Y_DELTA_SPIN;
-extern float Z_SPIN, Z_DELTA_SPIN;
-extern const int WINDOW_MAX_X;
-extern const int WINDOW_MAX_Y;
+#include "globals.h"
 
 /**
  * Continuously runs until the animation is called to stop

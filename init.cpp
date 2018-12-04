@@ -14,17 +14,19 @@
 
 // Specify actual storage space for global variables here
 
+/* Do constant definitions here.  Window specfications */
 /* Window specfications */
-const int WINDOW_POSITION_X;
-const int WINDOW_POSITION_Y;
-const int WINDOW_MAX_X;
-const int WINDOW_MAX_Y;
+int WINDOW_POSITION_X;
+int WINDOW_POSITION_Y;
+int WINDOW_MAX_X;
+int WINDOW_MAX_Y;
 
-const float WORLD_COORDINATES_MIN_X;
-const float WORLD_COORDINATES_MAX_X;
-const float WORLD_COORDINATES_MIN_Y;
-const float WORLD_COORDINATES_MAX_Y;
+float WORLD_COORDINATES_MIN_X;
+float WORLD_COORDINATES_MAX_X;
+float WORLD_COORDINATES_MIN_Y;
+float WORLD_COORDINATES_MAX_Y;
 
+/* Set these in an actual code element */
 float X_DELTA_SPIN;
 float Y_DELTA_SPIN;
 float Z_DELTA_SPIN;
@@ -43,35 +45,35 @@ int VIEW_MODE; // 1 = ortho, 2 = projection, 3 = custom -- Projection by default
 
 void initGlobals(){
 
-/* Window specfications */
-WINDOW_POSITION_X = 100;
-WINDOW_POSITION_Y = 100;
-WINDOW_MAX_X = 800;
-WINDOW_MAX_Y = 800;
+    WINDOW_POSITION_X = 100;
+    WINDOW_POSITION_Y = 100;
+    WINDOW_MAX_X = 800;
+    WINDOW_MAX_Y = 800;
 
-WORLD_COORDINATES_MIN_X = 0.0;
-WORLD_COORDINATES_MAX_X = 800.0;
-WORLD_COORDINATES_MIN_Y = 0.0;
-WORLD_COORDINATES_MAX_Y = 800;
+    WORLD_COORDINATES_MIN_X = 0.0;
+    WORLD_COORDINATES_MAX_X = 800.0;
+    WORLD_COORDINATES_MIN_Y = 0.0;
+    WORLD_COORDINATES_MAX_Y = 800;
 
-X_DELTA_SPIN = 0;
-Y_DELTA_SPIN = 0;
-Z_DELTA_SPIN = 0;
-X_SPIN = 0;
-Y_SPIN = 0;
-Z_SPIN = 0;
 
-CAMERA_MOD = 0; //Will be used to zoom in and out of the scene 
 
-/* For menu use */
-IS_WIREFRAME = false;
-AXES_DRAWN = true;
-HOUSE_SIGN = false; 
-VIEW_MODE = 2; // 1 = ortho, 2 = projection, 3 = custom -- Projection by default 
+    X_DELTA_SPIN = 0;
+    Y_DELTA_SPIN = 0;
+    Z_DELTA_SPIN = 0;
+    X_SPIN = 0;
+    Y_SPIN = 0;
+    Z_SPIN = 0;
+
+    CAMERA_MOD = 0; //Will be used to zoom in and out of the scene 
+
+    /* For menu use */
+    IS_WIREFRAME = false;
+    AXES_DRAWN = true;
+    HOUSE_SIGN = false; 
+    VIEW_MODE = 2; // 1 = ortho, 2 = projection, 3 = custom -- Projection by default 
 
 }
 
-#endif
 void myglutInit( int argc, char** argv ){
     glutInit( &argc, argv );
     glutInitDisplayMode( GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH );

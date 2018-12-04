@@ -9,22 +9,20 @@
 #ifndef globals_h
 #define globals_h
 
-#include <stdio.h>
-
 /* Window specfications */
-extern const int WINDOW_POSITION_X;
-extern const int WINDOW_POSITION_Y;
-extern const int WINDOW_MAX_X;
-extern const int WINDOW_MAX_Y;
+extern int WINDOW_POSITION_X;
+extern int WINDOW_POSITION_Y;
+extern int WINDOW_MAX_X;
+extern int WINDOW_MAX_Y;
 
-extern const float WORLD_COORDINATES_MIN_X;
-extern const float WORLD_COORDINATES_MAX_X;
-extern const float WORLD_COORDINATES_MIN_Y;
-extern const float WORLD_COORDINATES_MAX_Y;
+extern float WORLD_COORDINATES_MIN_X;
+extern float WORLD_COORDINATES_MAX_X;
+extern float WORLD_COORDINATES_MIN_Y;
+extern float WORLD_COORDINATES_MAX_Y;
 
-extern float X_DELTA_SPIN0;
-extern float Y_DELTA_SPIN0;
-extern float Z_DELTA_SPIN0;
+extern float X_DELTA_SPIN;
+extern float Y_DELTA_SPIN;
+extern float Z_DELTA_SPIN;
 extern float X_SPIN;
 extern float Y_SPIN;
 extern float Z_SPIN;
