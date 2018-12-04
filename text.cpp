@@ -8,6 +8,15 @@
 
 #include <stdio.h>
 #include <string.h>
+#include "include.h"
+
+extern const int WINDOW_MAX_X, WINDOW_MAX_Y;
+extern const int WINDOW_POSITION_X, WINDOW_POSITION_Y;
+extern float WORLD_COORDINATES_MIN_X, WORLD_COORDINATES_MAX_X;
+extern float WORLD_COORDINATES_MIN_Y, WORLD_COORDINATES_MAX_Y;
+extern bool IS_WIREFRAME, AXES_DRAWN, HOUSE_SIGN;
+extern int VIEW_MODE;
+
 
 /**
  *  Produce 2D text

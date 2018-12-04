@@ -2,7 +2,7 @@ COMP = g++
 LIBDIRS = -L/usr/lib64
 INCDIRS = -I/usr/include
 LDLIBS =  -lglut -lGL -lGLU -lX11 -lm
-OBJS = animation.o views.o house.o input.o menu.o axes.o init.o  
+OBJS = animation.o views.o house.o input.o menu.o axes.o init.o text.o 
 HEADERS = globals.h include.h
 
 UNAME_S := $(shell uname -s)
@@ -42,6 +42,9 @@ axes.o : axes.cpp $(HEADERS)
 
 init.o : init.cpp $(HEADERS) 
 	$(COMP) $(CCFLAG) -c init.cpp 
+
+text.o : text.cpp $(HEADERS) 
+	$(COMP) $(CCFLAG) -c text.cpp 
 
 clean : 
 	rm *.o

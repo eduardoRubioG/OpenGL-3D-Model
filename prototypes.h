@@ -23,5 +23,6 @@ void viewModeText();
 void drawHouse();
 void drawHouseLines();
 void drawAxes(int);
+void houseSign();
 
 #endif
