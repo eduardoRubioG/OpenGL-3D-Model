@@ -7,8 +7,10 @@
 //
 
 #include <stdio.h>
-#include <string.h>
+#include <string>
+#include <cstring>
 #include "include.h"
+#include "prototypes.h"
 
 extern const int WINDOW_MAX_X, WINDOW_MAX_Y;
 extern const int WINDOW_POSITION_X, WINDOW_POSITION_Y;
