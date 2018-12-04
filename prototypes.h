@@ -9,4 +9,5 @@ void keyboard( unsigned char, int, int );
 void animate( );
 void createMenu( );
 void display( );
+void houseSign( );
 

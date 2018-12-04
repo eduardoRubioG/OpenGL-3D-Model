@@ -7,6 +7,8 @@
 //
 
 #include <stdio.h>
+#include "include.h"
+#include "prototypes.h"
 
 /**
  * Returns the house to its original position and stops animation
