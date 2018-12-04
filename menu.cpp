@@ -7,6 +7,14 @@
 //
 
 #include <stdio.h>
+#include "include.h"
+#include "prototypes.h"
+
+
+extern bool IS_WIREFRAME;
+extern bool AXES_DRAWN;
+extern bool HOUSE_SIGN;
+extern int VIEW_MODE;
 
 /**
  * Handles all the user selections within the menu

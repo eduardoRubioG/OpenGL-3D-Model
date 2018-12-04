@@ -7,6 +7,8 @@
 //
 
 #include <stdio.h>
+#include "include.h"
+#include "prototypes.h"
 
 void drawAxes(int length)
 {

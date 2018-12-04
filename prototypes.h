@@ -10,4 +10,14 @@ void animate( );
 void createMenu( );
 void display( );
 void houseSign( );
+void lightReset( );
+void hardReset( );
+void stopAnimation( );
+void mouseAnimate( int, int, const float );
+void axesLabels( );
+void viewHandler( int );
+void viewModeText();
+void drawHouse();
+void drawHouseLines();
+void drawAxes(int);
 

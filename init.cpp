@@ -7,6 +7,9 @@
 //
 
 #include <stdio.h>
+#include "include.h"
+#include "prototypes.h"
+
 
 void myglutInit( int argc, char** argv ){
     glutInit( &argc, argv );
