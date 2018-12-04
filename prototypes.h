@@ -1,4 +1,7 @@
 
+#ifndef PROTOTYPES
+#define PROTOTYPES
+
 // FUNCTIONN PROTOTYPES //
 //
 void myglutInit( int, char**  );
@@ -21,3 +24,4 @@ void drawHouse();
 void drawHouseLines();
 void drawAxes(int);
 
+#endif
