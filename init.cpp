@@ -12,34 +12,62 @@
 #include "include.h"
 #include "prototypes.h"
 
-
-void initGlobals(){
+// Specify actual storage space for global variables here
 
 /* Window specfications */
-const int WINDOW_POSITION_X = 100;
-const int WINDOW_POSITION_Y = 100;
-const int WINDOW_MAX_X = 800;
-const int WINDOW_MAX_Y = 800;
+const int WINDOW_POSITION_X;
+const int WINDOW_POSITION_Y;
+const int WINDOW_MAX_X;
+const int WINDOW_MAX_Y;
 
-const float WORLD_COORDINATES_MIN_X = 0.0;
-const float WORLD_COORDINATES_MAX_X = 800.0;
-const float WORLD_COORDINATES_MIN_Y = 0.0;
-const float WORLD_COORDINATES_MAX_Y = 800;
+const float WORLD_COORDINATES_MIN_X;
+const float WORLD_COORDINATES_MAX_X;
+const float WORLD_COORDINATES_MIN_Y;
+const float WORLD_COORDINATES_MAX_Y;
 
-float X_DELTA_SPIN = 0;
-float Y_DELTA_SPIN = 0;
-float Z_DELTA_SPIN = 0;
-float X_SPIN = 0;
-float Y_SPIN = 0;
-float Z_SPIN = 0;
+float X_DELTA_SPIN;
+float Y_DELTA_SPIN;
+float Z_DELTA_SPIN;
+float X_SPIN;
+float Y_SPIN;
+float Z_SPIN;
 
 int CAMERA_MOD = 0; //Will be used to zoom in and out of the scene 
 
 /* For menu use */
-bool IS_WIREFRAME = false;
-bool AXES_DRAWN = true;
-bool HOUSE_SIGN = false; 
-int VIEW_MODE = 2; // 1 = ortho, 2 = projection, 3 = custom -- Projection by default 
+bool IS_WIREFRAME;
+bool AXES_DRAWN;
+bool HOUSE_SIGN; 
+int VIEW_MODE; // 1 = ortho, 2 = projection, 3 = custom -- Projection by default 
+
+
+void initGlobals(){
+
+/* Window specfications */
+WINDOW_POSITION_X = 100;
+WINDOW_POSITION_Y = 100;
+WINDOW_MAX_X = 800;
+WINDOW_MAX_Y = 800;
+
+WORLD_COORDINATES_MIN_X = 0.0;
+WORLD_COORDINATES_MAX_X = 800.0;
+WORLD_COORDINATES_MIN_Y = 0.0;
+WORLD_COORDINATES_MAX_Y = 800;
+
+X_DELTA_SPIN = 0;
+Y_DELTA_SPIN = 0;
+Z_DELTA_SPIN = 0;
+X_SPIN = 0;
+Y_SPIN = 0;
+Z_SPIN = 0;
+
+CAMERA_MOD = 0; //Will be used to zoom in and out of the scene 
+
+/* For menu use */
+IS_WIREFRAME = false;
+AXES_DRAWN = true;
+HOUSE_SIGN = false; 
+VIEW_MODE = 2; // 1 = ortho, 2 = projection, 3 = custom -- Projection by default 
 
 }
 
