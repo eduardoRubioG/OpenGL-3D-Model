@@ -12,30 +12,30 @@
 #include <stdio.h>
 
 /* Window specfications */
-const int WINDOW_POSITION_X = 100;
-const int WINDOW_POSITION_Y = 100;
-const int WINDOW_MAX_X = 800;
-const int WINDOW_MAX_Y = 800;
+extern const int WINDOW_POSITION_X;
+extern const int WINDOW_POSITION_Y;
+extern const int WINDOW_MAX_X;
+extern const int WINDOW_MAX_Y;
 
-const float WORLD_COORDINATES_MIN_X = 0.0;
-const float WORLD_COORDINATES_MAX_X = 800.0;
-const float WORLD_COORDINATES_MIN_Y = 0.0;
-const float WORLD_COORDINATES_MAX_Y = 800;
+extern const float WORLD_COORDINATES_MIN_X;
+extern const float WORLD_COORDINATES_MAX_X;
+extern const float WORLD_COORDINATES_MIN_Y;
+extern const float WORLD_COORDINATES_MAX_Y;
 
-float X_DELTA_SPIN = 0;
-float Y_DELTA_SPIN = 0;
-float Z_DELTA_SPIN = 0;
-float X_SPIN = 0;
-float Y_SPIN = 0;
-float Z_SPIN = 0;
+extern float X_DELTA_SPIN0;
+extern float Y_DELTA_SPIN0;
+extern float Z_DELTA_SPIN0;
+extern float X_SPIN;
+extern float Y_SPIN;
+extern float Z_SPIN;
 
-int CAMERA_MOD = 0; //Will be used to zoom in and out of the scene 
+extern int CAMERA_MOD; //Will be used to zoom in and out of the scene 
 
 /* For menu use */
-bool IS_WIREFRAME = false;
-bool AXES_DRAWN = true;
-bool HOUSE_SIGN = false; 
-int VIEW_MODE = 2; // 1 = ortho, 2 = projection, 3 = custom -- Projection by default 
+extern bool IS_WIREFRAME;
+extern bool AXES_DRAWN;
+extern bool HOUSE_SIGN; 
+extern int  VIEW_MODE; 
 
 
 #endif

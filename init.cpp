@@ -12,13 +12,38 @@
 #include "include.h"
 #include "prototypes.h"
 
-extern const int WINDOW_MAX_X, WINDOW_MAX_Y;
-extern const int WINDOW_POSITION_X, WINDOW_POSITION_Y;
-extern float WORLD_COORDINATES_MIN_X, WORLD_COORDINATES_MAX_X;
-extern float WORLD_COORDINATES_MIN_Y, WORLD_COORDINATES_MAX_Y;
-extern bool IS_WIREFRAME, AXES_DRAWN, HOUSE_SIGN;
-extern int VIEW_MODE;
 
+void initGlobals(){
+
+/* Window specfications */
+const int WINDOW_POSITION_X = 100;
+const int WINDOW_POSITION_Y = 100;
+const int WINDOW_MAX_X = 800;
+const int WINDOW_MAX_Y = 800;
+
+const float WORLD_COORDINATES_MIN_X = 0.0;
+const float WORLD_COORDINATES_MAX_X = 800.0;
+const float WORLD_COORDINATES_MIN_Y = 0.0;
+const float WORLD_COORDINATES_MAX_Y = 800;
+
+float X_DELTA_SPIN = 0;
+float Y_DELTA_SPIN = 0;
+float Z_DELTA_SPIN = 0;
+float X_SPIN = 0;
+float Y_SPIN = 0;
+float Z_SPIN = 0;
+
+int CAMERA_MOD = 0; //Will be used to zoom in and out of the scene 
+
+/* For menu use */
+bool IS_WIREFRAME = false;
+bool AXES_DRAWN = true;
+bool HOUSE_SIGN = false; 
+int VIEW_MODE = 2; // 1 = ortho, 2 = projection, 3 = custom -- Projection by default 
+
+}
+
+#endif
 void myglutInit( int argc, char** argv ){
     glutInit( &argc, argv );
     glutInitDisplayMode( GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH );
@@ -30,6 +55,7 @@ void myglutInit( int argc, char** argv ){
 void myInit(void){
     glClearColor(0.1, 0.1, 0.1, 1.0);
     glColor3f(1.0, 0.0, 0.0);
+    initGlobals();
     
     glViewport(0, 0, WINDOW_MAX_X, WINDOW_MAX_Y);
     glMatrixMode(GL_PROJECTION);
