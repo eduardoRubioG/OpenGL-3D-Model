@@ -6,6 +6,9 @@
 //  Copyright © 2018 Eduardo Rubio. All rights reserved.
 //
 
+#ifndef VIEWS
+#define VIEWS
+
 #include <stdio.h>
 #include <iostream>
 #include "include.h"
@@ -83,3 +86,6 @@ void viewHandler( int selection ) {
         default: break; 
     }
 }
+
+#endif
+

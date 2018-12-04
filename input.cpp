@@ -6,6 +6,9 @@
 //  Copyright © 2018 Eduardo Rubio. All rights reserved.
 //
 
+#ifndef INPUT
+#define INPUT
+
 #include <stdio.h>
 #include "include.h"
 #include "prototypes.h"
@@ -41,3 +44,5 @@ void keyboard( unsigned char key, int x, int y ){
     if( key == 'R' )  hardReset();    //Original position, house size, camera pos, and view mode
     glutPostRedisplay(); 
 }
+
+#endif

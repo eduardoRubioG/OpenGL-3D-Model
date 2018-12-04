@@ -6,6 +6,9 @@
 //  Copyright © 2018 Eduardo Rubio. All rights reserved.
 //
 
+#ifndef MAIN
+#define MAIN
+
 #include <iostream>
 #include "include.h"
 #include "prototypes.h"
@@ -24,3 +27,6 @@ int main(int argc,  char** argv ) {
     return 0;
 
 }
+
+#endif
+

@@ -6,6 +6,9 @@
 //  Copyright © 2018 Eduardo Rubio. All rights reserved.
 //
 
+#ifndef HOUSE
+#define HOUSE
+
 #include <stdio.h>
 #include "include.h"
 #include "prototypes.h"
@@ -158,3 +161,5 @@ void drawHouseLines( ){
     glPopMatrix();
     
 }
+
+#endif

@@ -6,6 +6,9 @@
 //  Copyright © 2018 Eduardo Rubio. All rights reserved.
 //
 
+#ifndef ANIMATION
+#define ANIMATION
+
 #include <stdio.h>
 #include "include.h"
 
@@ -80,5 +83,5 @@ void mouseAnimate( int x, int y, const float mod ){
     //glutIdleFunc(animate);
 }
 
-
+#endif
 

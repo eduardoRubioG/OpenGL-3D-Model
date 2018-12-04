@@ -6,6 +6,9 @@
 //  Copyright © 2018 Eduardo Rubio. All rights reserved.
 //
 
+#ifndef MENU
+#define MENU
+
 #include <stdio.h>
 #include "include.h"
 #include "prototypes.h"
@@ -87,4 +90,5 @@ void createMenu( ){
 
 
 
+#endif
 
