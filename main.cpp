@@ -11,6 +11,7 @@
 
 #include <iostream>
 #include "include.h"
+#include "globals.h"
 #include "prototypes.h"
 
 int main(int argc,  char** argv ) {

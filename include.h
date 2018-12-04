@@ -22,7 +22,7 @@
 #endif
 
 #include <stdio.h>
-#include "globals.h"
+//#include "globals.h"
 
 //#include "animation.cpp"
 //#include "views.cpp"

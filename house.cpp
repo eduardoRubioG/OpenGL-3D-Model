@@ -13,6 +13,13 @@
 #include "include.h"
 #include "prototypes.h"
 
+extern float X_SPIN, X_DELTA_SPIN;
+extern float Y_SPIN, Y_DELTA_SPIN;
+extern float Z_SPIN, Z_DELTA_SPIN;
+extern int VIEW_MODE;
+extern int CAMERA_MOD;
+extern bool HOUSE_SIGN;
+
 /**
  * Returns the house to its original position and stops animation
  */

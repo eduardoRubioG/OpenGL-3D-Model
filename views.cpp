@@ -13,6 +13,7 @@
 #include <iostream>
 #include "include.h"
 
+extern float CAMERA_MOD;
 
 /**
  * Switch to projection mode
