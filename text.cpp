@@ -7,7 +7,13 @@
 //
 
 #include <stdio.h>
-#include <string.h>
+#include <string>
+#include <cstring>
+#include "include.h"
+#include "globals.h"
+#include "prototypes.h"
+
+
 
 /**
  *  Produce 2D text

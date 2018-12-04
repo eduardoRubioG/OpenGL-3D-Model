@@ -6,7 +6,12 @@
 //  Copyright © 2018 Eduardo Rubio. All rights reserved.
 //
 
+#ifndef AXES
+#define AXES
+
 #include <stdio.h>
+#include "include.h"
+#include "prototypes.h"
 
 void drawAxes(int length)
 {
@@ -35,3 +40,5 @@ void drawAxes(int length)
     /* Label axes */
     axesLabels();
 }
+
+#endif

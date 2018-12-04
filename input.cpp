@@ -6,12 +6,17 @@
 //  Copyright © 2018 Eduardo Rubio. All rights reserved.
 //
 
-#include <stdio.h>
+#ifndef INPUT
+#define INPUT
 
-/**
- * Defines mouse interaction
- */
-void mouse( int button, int state, int x, int y ){
+#include <stdio.h>
+#include "include.h"
+#include "prototypes.h"
+
+extern float X_DELTA_SPIN;
+extern float Y_DELTA_SPIN;
+extern float Z_DELTA_SPIN;
+extern int CAMERA_MOD;/** * Defines mouse interaction */void mouse( int button, int state, int x, int y ){
     if( button == GLUT_LEFT_BUTTON && state == GLUT_DOWN ) mouseAnimate(x, y, 0.5);
     if( button == GLUT_RIGHT_BUTTON && state == GLUT_DOWN ) mouseAnimate(x, y, -0.5);
 }
@@ -31,11 +36,13 @@ void specialKeyboard( int key, int x, int y ){
 void keyboard( unsigned char key, int x, int y ){
 
     if( key == 'q' || key == 'Q' ) exit(0);
-    if( key == 'x' || key == 'X' ) {X_DELTA_SPIN += 0.5; glutIdleFunc(animate);}
-    if( key == 'y' || key == 'Y' ) {Y_DELTA_SPIN += 0.5; glutIdleFunc(animate);}
-    if( key == 'z' || key == 'Z' ) {Z_DELTA_SPIN += 0.5; glutIdleFunc(animate);}
+    if( key == 'x' || key == 'X' ) {X_DELTA_SPIN += 0.5; animate;}
+    if( key == 'y' || key == 'Y' ) {Y_DELTA_SPIN += 0.5; animate;}
+    if( key == 'z' || key == 'Z' ) {Z_DELTA_SPIN += 0.5; animate;}
     if( key == 's' || key == 'S' ) {glutIdleFunc(NULL); stopAnimation();}
-    if( key == 'r' ) {glutIdleFunc(NULL); lightReset();   }//original position and house size
-    if( key == 'R' ) {glutIdleFunc(NULL); hardReset();    }//Original position, house size, camera pos, and view mode
+    if( key == 'r' )  lightReset();   //original position and house size
+    if( key == 'R' )  hardReset();    //Original position, house size, camera pos, and view mode
     glutPostRedisplay(); 
 }
+
+#endif

@@ -6,7 +6,12 @@
 //  Copyright © 2018 Eduardo Rubio. All rights reserved.
 //
 
+#ifndef ANIMATION
+#define ANIMATION
+
 #include <stdio.h>
+#include "include.h"
+#include "globals.h"
 
 /**
  * Continuously runs until the animation is called to stop
@@ -69,8 +74,9 @@ void mouseAnimate( int x, int y, const float mod ){
         X_DELTA_SPIN += mod;
     
     /* Finish function */
-    glutIdleFunc(animate);
+    animate();
+    //glutIdleFunc(animate);
 }
 
-
+#endif
 

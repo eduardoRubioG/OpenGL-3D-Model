@@ -6,7 +6,18 @@
 //  Copyright © 2018 Eduardo Rubio. All rights reserved.
 //
 
+#ifndef MENU
+#define MENU
+
 #include <stdio.h>
+#include "include.h"
+#include "prototypes.h"
+
+
+extern bool IS_WIREFRAME;
+extern bool AXES_DRAWN;
+extern bool HOUSE_SIGN;
+extern int VIEW_MODE;
 
 /**
  * Handles all the user selections within the menu
@@ -79,4 +90,5 @@ void createMenu( ){
 
 
 
+#endif
 
