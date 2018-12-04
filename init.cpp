@@ -34,7 +34,7 @@ float X_SPIN;
 float Y_SPIN;
 float Z_SPIN;
 
-int CAMERA_MOD = 0; //Will be used to zoom in and out of the scene 
+float CAMERA_MOD; //Will be used to zoom in and out of the scene 
 
 /* For menu use */
 bool IS_WIREFRAME;

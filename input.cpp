@@ -16,7 +16,11 @@
 extern float X_DELTA_SPIN;
 extern float Y_DELTA_SPIN;
 extern float Z_DELTA_SPIN;
-extern int CAMERA_MOD;/** * Defines mouse interaction */void mouse( int button, int state, int x, int y ){
+extern float CAMERA_MOD;
+/** 
+ *  Defines mouse interaction 
+ **/
+void mouse( int button, int state, int x, int y ){
     if( button == GLUT_LEFT_BUTTON && state == GLUT_DOWN ) mouseAnimate(x, y, 0.5);
     if( button == GLUT_RIGHT_BUTTON && state == GLUT_DOWN ) mouseAnimate(x, y, -0.5);
 }
