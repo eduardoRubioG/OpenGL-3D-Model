@@ -74,8 +74,8 @@ void mouseAnimate( int x, int y, const float mod ){
         X_DELTA_SPIN += mod;
     
     /* Finish function */
-    animate();
-    //glutIdleFunc(animate);
+    //animate();
+    glutIdleFunc(animate);
 }
 
 #endif
