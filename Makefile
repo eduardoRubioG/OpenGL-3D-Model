@@ -1,3 +1,5 @@
+# To compile, simply type "make" into the command line to produce an executable
+#
 COMP = g++
 LIBDIRS = -L/usr/lib64
 INCDIRS = -I/usr/include
